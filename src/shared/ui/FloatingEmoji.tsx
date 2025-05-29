@@ -14,7 +14,7 @@ interface FloatingTextProps {
 
 interface UseFloatingEmojisReturn {
     items: FloatingEmoji[];
-    addItem: (text: string) => void;
+    addItem: (text: string, position: "left" | "center" | "right") => void;
     clearItems: () => void;
 }
 
@@ -70,7 +70,7 @@ const FloatingText: React.FC<FloatingTextProps> = ({ items, duration = 4000 }) =
 const useFloatingEmojis = (duration: number = 5000): UseFloatingEmojisReturn => {
     const [items, setItems] = useState<FloatingEmoji[]>([]);
     
-    const addItem = useCallback((text: string, position: "left" | "center" | "right" = "center"): void => {
+    const addItem = useCallback((text: string, position: "left" | "center" | "right"): void => {
         const posX = position === "center" ? Math.random() * 80 + 10 :
                      (position === "left" ? Math.random() * 40 + 5 :
                       Math.random() * 40 + 55); // right

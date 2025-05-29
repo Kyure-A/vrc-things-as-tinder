@@ -18,14 +18,6 @@ const fetchProduct = async () => {
 export default function Booth () {
     const product = use(fetchProduct());
     
-    const onSwipe = () => {
-        
-    };
-
-    const onCardLeftScreen = () => {
-        
-    };
-    
     return (
         <>
           <TinderCards cards={product} />

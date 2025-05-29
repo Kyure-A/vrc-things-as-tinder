@@ -10,17 +10,9 @@ const fetchWorlds = async () => {
 export default function World () {
     const worlds = use(fetchWorlds());
     
-    const onSwipe = () => {
-        
-    };
-
-    const onCardLeftScreen = () => {
-        
-    };
-    
     return (
         <>
-          <TinderCards cards={worlds} />
+          <TinderCards cards={worlds}/>
         </>
     );
 }

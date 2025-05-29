@@ -1,5 +1,4 @@
 "use client";
-
 import TinderCard from "react-tinder-card";
 import CardLayout from "./CardLayout";
 import { FloatingText, useFloatingEmojis } from "./FloatingEmoji";

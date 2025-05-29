@@ -33,7 +33,7 @@ export default function TinderCards (props: TinderCardsProps) {
           <FloatingText items={Emoji.items} />
           {props.cards.map((c, index) => 
               <TinderCard
-                  className="absolute"
+                  className="absolute select-none"
                   key={index}
                   onSwipe={(dir) => handleSwipe(c, dir)}
                   onCardLeftScreen={(dir) => handleCardLeftScreen(c, dir)}>

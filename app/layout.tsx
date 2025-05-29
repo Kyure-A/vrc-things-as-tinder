@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import GooeyNav from "@/shared/ui/GooeyNav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +25,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <div className="flex flex-col items-center justify-center pt-5 font-[family-name:var(--font-geist-sans)]">
+          <GooeyNav
+              items={[
+                  { label: "Booth", href: "/booth" },
+                  { label: "World", href: "/worlds" },
+              ]}
+          />
+          {children}
+        </div>
       </body>
     </html>
   );

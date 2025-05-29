@@ -6,6 +6,7 @@ import CardLayout from "./CardLayout";
 export type TinderCardValue = {
     title: string;
     imageUrl: string;
+    url: string;
     description: string;
 };
 

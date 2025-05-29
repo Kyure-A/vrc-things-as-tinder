@@ -10,8 +10,9 @@ const fetchProduct = async () => {
             title: item.name? item.name : "error",
             description: item.shopDisplayName ? item.shopDisplayName : "error",
             imageUrl: item.thumbnailUrl ? item.thumbnailUrl : "error",
+            url: item.url ? item.url : "/",
         };
-    })
+    }).sort(() => Math.random() - 0.5);
 };
 
 export default function Booth () {
